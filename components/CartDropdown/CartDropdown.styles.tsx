@@ -33,6 +33,6 @@ export const CartItemsContainer = styled.div`
   display: grid;
   align-content: start;
   grid-gap: 3rem;
-  overflow: scroll;
+  overflow: auto;
   padding: 0.5rem;
 `;

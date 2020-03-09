@@ -8,7 +8,6 @@ export const CheckoutItemContainer = styled.div`
   padding: 0.5rem 0;
   font-size: 1rem;
   align-items: center;
-  overflow-y: scroll;
 `;
 
 export const ImageContainer = styled.div`

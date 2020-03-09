@@ -10,6 +10,7 @@ export const ProductListContainer = styled.div`
 
   h1 {
     font-size: 2.5rem;
+    margin: 1rem;
   }
 
   @media (max-width: 800px) {
@@ -19,7 +20,7 @@ export const ProductListContainer = styled.div`
 
 export const ProductListStyled = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
   justify-items: center;
   max-width: 60rem;

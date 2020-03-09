@@ -44,7 +44,7 @@ export const HeaderBlockContainer = styled.div`
 
 export const CheckoutItemsContainer = styled.div`
   max-height: 50vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 `;
 export const TotalContainer = styled.div`
   margin-top: 2rem;
