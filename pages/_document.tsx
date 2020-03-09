@@ -10,14 +10,14 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export default class Document extends NextDocument {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: any) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props =>
+          enhanceApp: (App: any) => (props: any) =>
             sheet.collectStyles(
               <>
                 <GlobalStyles />
