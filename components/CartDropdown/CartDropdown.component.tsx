@@ -20,9 +20,10 @@ interface ICartItem {
 
 interface IProps {
   cartItems: ICartItem[];
+  handleDropdown: () => void;
 }
 
-const CartDropdown = ({ cartItems }: IProps) => {
+const CartDropdown = ({ cartItems, handleDropdown }: IProps) => {
   const handleRedirect = () => {
     Router.push('/checkout');
   };
@@ -36,7 +37,14 @@ const CartDropdown = ({ cartItems }: IProps) => {
           <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>
         )}
       </CartItemsContainer>
-      <CartDropdownButton onClick={() => handleRedirect()}>GO TO CHECKOUT</CartDropdownButton>
+      <CartDropdownButton
+        onClick={() => {
+          handleDropdown();
+          handleRedirect();
+        }}
+      >
+        GO TO CHECKOUT
+      </CartDropdownButton>
     </CartDropdownContainer>
   );
 };

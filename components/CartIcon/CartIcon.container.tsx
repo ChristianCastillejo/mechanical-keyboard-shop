@@ -22,7 +22,7 @@ interface IProps {
 const CartIconContainer = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const handleDropdown = () => {
+  const handleDropdown: () => void = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
@@ -31,7 +31,7 @@ const CartIconContainer = () => {
       {({ data: { itemCount } }: IProps) => (
         <div>
           <CartIcon itemCount={itemCount} handleDropdown={handleDropdown} />
-          {isDropdownOpen && <CartDropdownContainer />}
+          {isDropdownOpen && <CartDropdownContainer handleDropdown={handleDropdown} />}
         </div>
       )}
     </Query>

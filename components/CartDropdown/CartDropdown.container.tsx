@@ -22,13 +22,19 @@ interface IData {
   cartItems: ICartItem[];
 }
 
+interface IPropsHandle {
+  handleDropdown: () => void;
+}
+
 interface IProps {
   data: IData;
 }
 
-const CartDropdownContainer = () => (
+const CartDropdownContainer = ({ handleDropdown }: IPropsHandle) => (
   <Query query={GET_CART_ITEMS}>
-    {({ data: { cartItems } }: IProps) => <CartDropdown cartItems={cartItems} />}
+    {({ data: { cartItems } }: IProps) => (
+      <CartDropdown cartItems={cartItems} handleDropdown={handleDropdown} />
+    )}
   </Query>
 );
 
