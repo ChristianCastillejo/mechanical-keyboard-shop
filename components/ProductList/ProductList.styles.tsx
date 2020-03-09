@@ -21,7 +21,7 @@ export const ProductListContainer = styled.div`
 export const ProductListStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 1rem 3rem;
   justify-items: center;
   max-width: 60rem;
 
