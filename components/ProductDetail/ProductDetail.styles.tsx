@@ -57,4 +57,8 @@ export const Details = styled.div`
   display: grid;
   grid-gap: 2rem;
   align-content: start;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;

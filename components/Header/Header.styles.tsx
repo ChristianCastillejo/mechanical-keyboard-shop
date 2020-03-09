@@ -4,7 +4,7 @@ export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  background-color: #ccc;
+  background-color: #5cdb95;
   padding: 0;
   width: 100%;
   height: 4rem;
@@ -23,6 +23,7 @@ export const HeaderContainer = styled.div`
 export const Links = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  font-weight: bold;
 
   @media (max-width: 800px) {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));

@@ -56,7 +56,7 @@ const CheckoutComponent = ({ cartItems, total }: IProps) => {
             <CheckoutItem key={cartItem.id} cartItem={cartItem} />
           ))}
         </CheckoutItemsContainer>
-        <TotalContainer>TOTAL: ${total}</TotalContainer>
+        <TotalContainer>TOTAL: €{total}</TotalContainer>
       </CheckoutContainer>
       {cartItems.length > 0 && <CheckoutForm />}
     </CheckoutPageContainer>
