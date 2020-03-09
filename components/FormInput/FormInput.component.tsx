@@ -2,16 +2,16 @@ import { GroupContainer, FormInputContainer, FormInputLabel } from './FormInput.
 
 interface IProps {
   label: string;
-  value: any;
   type: string;
   name: string;
   required: boolean;
+  defaultValue: string;
 }
 const FormInput = ({ label, ...props }: IProps) => (
   <GroupContainer>
     <FormInputContainer {...props} />
     {label ? (
-      <FormInputLabel className={props.value.length ? 'shrink' : ''}>{label}</FormInputLabel>
+      <FormInputLabel className={props.defaultValue.length ? 'shrink' : ''}>{label}</FormInputLabel>
     ) : null}
   </GroupContainer>
 );

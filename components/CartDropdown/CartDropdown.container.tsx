@@ -9,9 +9,32 @@ const GET_CART_ITEMS = gql`
   }
 `;
 
-const CartDropdownContainer = () => (
+interface ICartItem {
+  id: string;
+  image: { src: string };
+  title: string;
+  product: { title: string };
+  quantity: number;
+  price: string;
+}
+
+interface IData {
+  cartItems: ICartItem[];
+}
+
+interface IPropsHandle {
+  handleDropdown: () => void;
+}
+
+interface IProps {
+  data: IData;
+}
+
+const CartDropdownContainer = ({ handleDropdown }: IPropsHandle) => (
   <Query query={GET_CART_ITEMS}>
-    {({ data: { cartItems } }) => <CartDropdown cartItems={cartItems} />}
+    {({ data: { cartItems } }: IProps) => (
+      <CartDropdown cartItems={cartItems} handleDropdown={handleDropdown} />
+    )}
   </Query>
 );
 

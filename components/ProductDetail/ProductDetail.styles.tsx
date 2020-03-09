@@ -7,7 +7,7 @@ export const ProductDetailContainer = styled.div`
   margin: 6rem auto 3rem;
   max-width: 60rem;
   height: 60vh;
-  padding-bottom: 3rem;
+  padding: 0 1rem 3rem;
 
   h1 {
     margin: 0;
@@ -57,4 +57,8 @@ export const Details = styled.div`
   display: grid;
   grid-gap: 2rem;
   align-content: start;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;

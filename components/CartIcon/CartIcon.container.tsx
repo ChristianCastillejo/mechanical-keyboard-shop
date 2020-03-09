@@ -11,19 +11,27 @@ const GET_ITEM_COUNT = gql`
   }
 `;
 
+interface IData {
+  itemCount: number;
+}
+
+interface IProps {
+  data: IData;
+}
+
 const CartIconContainer = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const handleDropdown = () => {
+  const handleDropdown: () => void = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
     <Query query={GET_ITEM_COUNT}>
-      {({ data: { itemCount } }) => (
+      {({ data: { itemCount } }: IProps) => (
         <div>
           <CartIcon itemCount={itemCount} handleDropdown={handleDropdown} />
-          {isDropdownOpen && <CartDropdownContainer />}
+          {isDropdownOpen && <CartDropdownContainer handleDropdown={handleDropdown} />}
         </div>
       )}
     </Query>
