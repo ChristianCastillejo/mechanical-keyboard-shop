@@ -63,15 +63,22 @@ interface IProps {
 const ProductDetail = ({ product, selectedVariantId, addItem }: IProps) => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedVariants, setSelectedVariants] = useState({ name: '', value: '' });
+  const [variantPrice, setVariantPrice] = useState('');
 
   useEffect(() => {
     let selectedOptionsObject: any[] = [];
+    let price: string = '';
     if (selectedVariantId) {
       selectedOptionsObject = {
         ...product.variants.edges.filter(edge => edge.node.id === selectedVariantId)[0]
       }.node.selectedOptions;
+
+      price = {
+        ...product.variants.edges.filter(edge => edge.node.id === selectedVariantId)[0]
+      }.node.price;
     } else {
       selectedOptionsObject = product.variants.edges[0].node.selectedOptions;
+      price = product.variants.edges[0].node.price;
     }
 
     const selectedOptions = Object.assign(
@@ -80,7 +87,7 @@ const ProductDetail = ({ product, selectedVariantId, addItem }: IProps) => {
         [variant.name]: variant.value
       }))
     );
-
+    setVariantPrice(price);
     setSelectedVariants(selectedOptions);
   }, [selectedVariantId]);
 
@@ -127,7 +134,7 @@ const ProductDetail = ({ product, selectedVariantId, addItem }: IProps) => {
       <Details>
         <div>
           <h1>{product?.title}</h1>
-          <h4>Price 100€</h4>
+          <h4>€{variantPrice}</h4>
           <h5>Tax included.</h5>
         </div>
         <VariantsSelector
