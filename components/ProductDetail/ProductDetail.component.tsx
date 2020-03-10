@@ -38,6 +38,7 @@ interface IProductDetail {
           price: string;
           selectedOptions: [];
           title: string;
+          sku: string;
           product: {
             title: string;
           };
@@ -70,11 +71,11 @@ const ProductDetail = ({ product, selectedVariantId, addItem }: IProps) => {
     let price: string = '';
     if (selectedVariantId) {
       selectedOptionsObject = {
-        ...product.variants.edges.filter(edge => edge.node.id === selectedVariantId)[0]
+        ...product.variants.edges.filter(edge => edge.node.sku === selectedVariantId)[0]
       }.node.selectedOptions;
 
       price = {
-        ...product.variants.edges.filter(edge => edge.node.id === selectedVariantId)[0]
+        ...product.variants.edges.filter(edge => edge.node.sku === selectedVariantId)[0]
       }.node.price;
     } else {
       selectedOptionsObject = product.variants.edges[0].node.selectedOptions;
@@ -99,14 +100,14 @@ const ProductDetail = ({ product, selectedVariantId, addItem }: IProps) => {
         edge.node.title.includes(newSelectedVariants['Size']) &&
         edge.node.title.includes(newSelectedVariants['Color'])
     )[0];
-    Router.push('/[handle]', `/${product.handle}?variant=${newVariant.node.id}`);
+    Router.push('/[handle]', `/${product.handle}?variant=${newVariant.node.sku}`);
   };
 
   const handleAddItemToCart = () => {
     let variantToAdd = {};
     if (selectedVariantId) {
       variantToAdd = {
-        ...product.variants.edges.filter(edge => edge.node.id === selectedVariantId)[0]
+        ...product.variants.edges.filter(edge => edge.node.sku === selectedVariantId)[0]
       }.node;
     } else {
       variantToAdd = product.variants.edges[0].node;

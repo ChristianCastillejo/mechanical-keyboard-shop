@@ -63,6 +63,7 @@ Product.getInitialProps = async (ctx: {
               node {
                 id
                 title
+                sku
                 selectedOptions {
                   name
                   value
