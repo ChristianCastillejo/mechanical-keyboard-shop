@@ -11,13 +11,13 @@ export const CheckoutItemContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  padding-right: 15px;
+  padding-right: 1rem;
   img {
     width: 100%;
     height: 60%;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     padding-right: unset;
   }
 `;
@@ -37,6 +37,6 @@ export const QuantityContainer = styled(TextContainer)`
 `;
 
 export const RemoveButtonContainer = styled.div`
-  padding-left: 12px;
+  padding-left: 0.8rem;
   cursor: pointer;
 `;

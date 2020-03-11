@@ -13,7 +13,7 @@ export const ProductDetailContainer = styled.div`
     margin: 0;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     grid-template-columns: 1fr;
     justify-items: center;
     padding: 0 1rem;
@@ -27,7 +27,7 @@ export const Images = styled.div`
   grid-gap: 1rem;
   width: 80%;
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     width: unset;
   }
 `;
@@ -58,7 +58,7 @@ export const Details = styled.div`
   grid-gap: 2rem;
   align-content: start;
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     width: 100%;
   }
 `;

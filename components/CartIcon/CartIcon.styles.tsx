@@ -18,7 +18,7 @@ export const ShoppingIconStyled = styled.div`
 
 export const ItemCount = styled.div`
     position: absolute;
-    font-size: 10px;
+    font-size: 0.7rem;
     font-weight: bold;
     bottom: 0.8rem;
     text-align: center;

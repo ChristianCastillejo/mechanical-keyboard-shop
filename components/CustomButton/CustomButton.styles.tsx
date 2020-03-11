@@ -16,6 +16,6 @@ export const CustomButtonStyled = styled.button`
   border: none;
 
   &:hover {
-    box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.4rem 1.5rem 0 rgba(0, 0, 0, 0.15);
   }
 `;

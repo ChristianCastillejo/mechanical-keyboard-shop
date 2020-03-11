@@ -13,13 +13,6 @@ export const typeDefs = gql`
     quantity: Int
   }
 
-  extend type User {
-    id: ID!
-    displayName: String!
-    email: String!
-    createdAt: DateTime!
-  }
-
   extend type Mutation {
     AddItemToCart(item: Item!): [Item]!
     RemoveItemFromCart(item: Item!): [Item]!

@@ -15,18 +15,18 @@ export const HeaderContainer = styled.div`
   color: #292f33;
   z-index: 10;
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     padding: 0 1rem;
   }
 `;
 
 export const Links = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
   font-weight: bold;
 
-  @media (max-width: 800px) {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  @media (max-width: 50rem) {
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
   }
 `;
 

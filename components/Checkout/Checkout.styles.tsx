@@ -10,7 +10,7 @@ export const CheckoutPageContainer = styled.div`
     margin-top: 3rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     width: unset;
     padding: 0 1rem;
   }
@@ -27,7 +27,7 @@ export const CheckoutHeaderContainer = styled.div`
   font-size: 1rem;
   align-items: center;
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     grid-template-columns: repeat(5, auto);
     font-size: 0.8rem;
     grid-gap: unset;

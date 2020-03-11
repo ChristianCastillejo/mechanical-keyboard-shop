@@ -13,7 +13,7 @@ export const HomeContainerStyled = styled.div`
     font-size: 3rem;
     color: #05386b;
 
-    @media (max-width: 800px) {
+    @media (max-width: 50rem) {
       font-size: 2rem;
     }
   }

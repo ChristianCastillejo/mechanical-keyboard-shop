@@ -13,7 +13,7 @@ export const ProductListContainer = styled.div`
     margin: 1rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     grid-gap: unset;
   }
 `;
@@ -25,7 +25,7 @@ export const ProductListStyled = styled.div`
   justify-items: center;
   max-width: 60rem;
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     grid-template-columns: 1fr;
   }
 `;
@@ -36,7 +36,7 @@ export const ProductListItem = styled.a`
   height: 24rem;
   max-width: 18rem;
   border-radius: 1rem;
-  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.4rem 1.5rem 0 rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
   cursor: pointer;
   text-decoration: none;
@@ -46,12 +46,12 @@ export const ProductListItem = styled.a`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.4rem 1.5rem 0 rgba(0, 0, 0, 0.3);
     color: #292f33;
     text-decoration: none;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     &:hover {
       transform: unset;
     }

@@ -7,8 +7,6 @@ import { ApolloClient } from 'apollo-client';
 import { resolvers, typeDefs } from './resolvers';
 import { default as data } from './initialData';
 
-const cache = new InMemoryCache();
-
 const httpLink = createHttpLink({
   uri: 'https://mechanical-keyboard-shop.myshopify.com/api/2020-01/graphql.json'
 });
